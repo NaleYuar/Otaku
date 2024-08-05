@@ -11,12 +11,14 @@
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
+            line-height: 1.6;
         }
 
         .navbar {
             display: flex;
+            flex-direction: column;
             background: rgba(0, 0, 0, 0.8);
-            padding: 10px 0;
+            padding: 10px;
             position: fixed;
             width: 100%;
             top: 0;
@@ -27,8 +29,8 @@
         .navbar a {
             color: #e0e0e0;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 22px;
+            margin: 10px 0;
+            font-size: 20px;
             transition: color 0.3s;
             cursor: pointer;
         }
@@ -38,41 +40,78 @@
         }
 
         .navbar .home {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
         }
 
         .background {
             text-align: center;
-            padding: 50px;
-            margin-top: 100px;
+            padding: 20px;
+            margin-top: 80px;
         }
 
         .text-content {
-            max-width: 1000px;
-            margin: 70px auto 0 auto;
-            padding: 20px;
+            max-width: 90%;
+            margin: 20px auto 0 auto;
+            padding: 15px;
             background: rgba(0, 0, 0, 0.6);
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 1.0);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
         }
 
         h2 {
             font-family: 'Georgia', serif;
-            font-size: 32px;
+            font-size: 24px;
         }
 
         p {
-            font-size: 24px;
+            font-size: 18px;
         }
 
         img {
             border-radius: 8px;
+            max-width: 100%;
+            height: auto;
         }
 
         /* 隱藏內容區域的樣式 */
         .hidden {
             display: none;
+        }
+
+        /* 媒體查詢，適應不同螢幕尺寸 */
+        @media (min-width: 768px) {
+            .navbar {
+                flex-direction: row;
+            }
+
+            .navbar a {
+                margin: 0 15px;
+                font-size: 22px;
+            }
+
+            .navbar .home {
+                font-size: 28px;
+            }
+
+            .background {
+                padding: 50px;
+                margin-top: 100px;
+            }
+
+            .text-content {
+                max-width: 1000px;
+                margin: 70px auto 0 auto;
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -84,7 +123,7 @@
     </nav>
 
     <div class="background" id="main-content">
-        <img src="https://i.imgur.com/os9sO3X.png" alt="Image" style="max-width: 100%; height: auto;">
+        <img src="https://i.imgur.com/os9sO3X.png" alt="Image">
         <div class="text-content">
             <h2>《御宅惡夢》（おたくのあくむ）</h2>
             <p>是 Kaseeia 開始所提案的遊戲小說系列。講述在不可名狀邪神下探尋真相、尋求生路的少年少女們的故事。故事雛形由 2018 由 yAsm1nz 提出發想進行過短暫的周邊人物遊戲化的發想，隨後在 2020 年 Kaseeia 提議將當面 2 月的某次聚會所發生的事作為原型並加入克蘇魯神話等恐怖懸疑要素，從此開始的製作計畫。</p>
@@ -99,9 +138,10 @@
     </div>
 	
     <div class="background hidden" id="characters-content">
-		<img src="https://i.imgur.com/7fnJ2oF.png" alt="Image" style="max-width: 100%; height: auto;">
-            
-			 <p>角色列表</p>
+        <img src="https://i.imgur.com/7fnJ2oF.png" alt="Image">
+        <div class="text-content">
+            <p>角色列表</p>
+        </div>
     </div>
 
     <script>
