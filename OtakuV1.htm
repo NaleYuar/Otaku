@@ -137,8 +137,6 @@
             box-sizing: border-box;
         }
 
-
-
         .carousel-control {
             position: absolute;
             top: 50%;
@@ -224,6 +222,33 @@
 			font-size: 18px;
 			margin: 5px 0;
 		}
+		
+		#game-content p {
+			border: 2px solid #6c8ebf;  /* 邊框顏色為黑色 */
+			padding: 10px; /* 內邊距 */
+			margin: 10px 0; /* 外邊距 */
+			border-radius: 5px; /* 邊框圓角 */
+			background-color: transparent; /* 內部背景顏色設為透明 */
+		}
+
+		/* 為 '僕從種族' 和 '半生物' 設置顏色 */
+		#game-content h3 {
+			color: #4a90e2; /* 例如藍色 */
+		}
+
+		#game-content h4 {
+			color: #7f8c8d; /* 例如灰藍色 */
+		}
+
+		#game-content h5 {
+			color: #7f8c8d; /* 例如灰藍色 */
+		}
+
+		/* 為 '寄生體／感染者', '甦醒者', 和 '初芽' 設置顏色 */
+		#game-content .same-color {
+			color: #7f8c8d; /* 例如灰藍色 */
+		}
+		
     </style>
 </head>
 <body>
@@ -256,8 +281,30 @@
 		</div>
     </div>
 	
-	<div class="background hidden" id="game-content">
-
+<div class="background hidden" id="game-content">
+  <div class="text-content">
+    <h2>神話生物</h2>
+    
+    <h3>僕從種族</h3>
+    
+    <h4 class="same-color">寄生體／感染者</h4>
+    <img src="https://i.imgur.com/c4Dty3R.png" alt="Image">
+    <p>金屬狀黑色液體，身形柔軟可隨意變形，看似如水般柔軟，實際上卻能刺穿或割裂各類物體。在被攻擊、產生傷口後接觸此生物會導致不可逆的寄生反應（血管、器官）成長時將聚在一起，與環境合一，開始分裂，並成長出眼睛的結構，以應付外來者的威脅。</p>
+    
+    <h4 class="same-color">甦醒者</h4>
+    <img src="https://i.imgur.com/VGAMRbO.png" alt="Image">
+    <p>
+      成長完全的初芽，身體主要組成為凝固的金屬，眼睛周圍／尾部成長出晶體。成長完畢後將從身體剝落，並產出更多後代。瞳孔中間因高熱及亮光而溶解了液態晶體，散發著不可描述的光芒。甦醒者會透過自己身體的強大磁場控制著周圍的結晶碎片，並使自己處於飛行狀態。
+    </p>
+    
+    <h4>半生物</h4>
+    <h5 class="same-color">初芽</h5>
+    <img src="https://i.imgur.com/6WyOLhl.png" alt="Image">
+    <p>
+      接觸效果：幻覺、偏執、產生服從性、身體孔洞出血（長期碰觸）<br>
+      介紹：所有怪物的卵囊，成熟後將從中迸出黑色金屬性液體。
+    </p>
+  </div>
 </div>
 
 	
