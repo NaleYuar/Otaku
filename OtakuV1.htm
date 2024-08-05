@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網站</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #2b2d34, #1f2025);
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 22px;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        .navbar .home {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .background {
+            text-align: center;
+            padding: 50px;
+            margin-top: 100px;
+        }
+
+        .text-content {
+            max-width: 1000px;
+            margin: 70px auto 0 auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 1.0);
+        }
+
+        h2 {
+            font-family: 'Georgia', serif;
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        img {
+            border-radius: 8px;
+        }
+
+        /* 隱藏內容區域的樣式 */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="home" onclick="showPage('main-content')">御宅的噩夢</a>
+        <a href="#" onclick="showPage('intro-content')">故事簡介</a>
+        <a href="#" onclick="showPage('characters-content')">角色介紹</a>
+    </nav>
+
+    <div class="background" id="main-content">
+        <img src="https://i.imgur.com/os9sO3X.png" alt="Image" style="max-width: 100%; height: auto;">
+        <div class="text-content">
+            <h2>《御宅惡夢》（おたくのあくむ）</h2>
+            <p>是 Kaseeia 開始所提案的遊戲小說系列。講述在不可名狀邪神下探尋真相、尋求生路的少年少女們的故事。故事雛形由 2018 由 yAsm1nz 提出發想進行過短暫的周邊人物遊戲化的發想，隨後在 2020 年 Kaseeia 提議將當面 2 月的某次聚會所發生的事作為原型並加入克蘇魯神話等恐怖懸疑要素，從此開始的製作計畫。</p>
+            <p>（翻修中，今年一定弄完，真的。）</p>
+        </div>
+    </div>
+	
+    <div class="background hidden" id="intro-content">
+        <div class="text-content">
+            <p>二〇二〇年二月五日，御宅帝國的成員們出發至東京旅遊。在第一天深夜，他們看到新聞插播：國際空間站觀測到一顆巨型晶體狀隕石即將墜落於東京，預定落點為屋台山山上。經過熱烈討論，他們決定「夜衝」，開車前往隕石墜落地點。到達後，他們繞過了少數警方專案小組與研究員的封鎖線，見到了那璀璨且散發著未知光芒的晶體。在好奇心驅使下，有一人觸碰了它。隨即，隕石周遭的每個人都由於它爆發出的神秘力場陷入了裏世界。在這些人當中，有幾個人能不失去理智？又有幾個人能活著回來呢？</p>
+        </div>
+    </div>
+	
+    <div class="background hidden" id="characters-content">
+        <div class="text-content">
+             <img src="https://i.imgur.com/7fnJ2oF.png" alt="Image" style="max-width: 200%; height: auto;">
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('.background');
+            pages.forEach(function(page) {
+                if (page.id === pageId) {
+                    page.classList.remove('hidden');
+                } else {
+                    page.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
