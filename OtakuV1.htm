@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>網站</title>
     <style>
+        img {
+            border-radius: 8px;
+            max-width: 50%; /* 確保圖片最大寬度為50% */
+            height: auto;  /* 自動調整高度 */
+        }
+        
         body {
             background: linear-gradient(135deg, #2b2d34, #1f2025);
             color: #e0e0e0;
@@ -113,6 +119,60 @@
                 font-size: 24px;
             }
         }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+
+
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            text-align: center;
+            line-height: 30px;
+            z-index: 10;
+        }
+
+        .carousel-control.prev {
+            left: 10px;
+            transform: translateY(-50%);
+        }
+
+        .carousel-control.next {
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .character h3 {
+            font-family: 'Georgia', serif;
+            font-size: 20px;
+            color: #ffcc00;
+        }
+
+        .character p {
+            font-size: 16px;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -130,21 +190,59 @@
             <p>（翻修中，今年一定弄完，真的。）</p>
         </div>
     </div>
-	
+    
     <div class="background hidden" id="intro-content">
         <div class="text-content">
             <p>二〇二〇年二月五日，御宅帝國的成員們出發至東京旅遊。在第一天深夜，他們看到新聞插播：國際空間站觀測到一顆巨型晶體狀隕石即將墜落於東京，預定落點為屋台山山上。經過熱烈討論，他們決定「夜衝」，開車前往隕石墜落地點。到達後，他們繞過了少數警方專案小組與研究員的封鎖線，見到了那璀璨且散發著未知光芒的晶體。在好奇心驅使下，有一人觸碰了它。隨即，隕石周遭的每個人都由於它爆發出的神秘力場陷入了裏世界。在這些人當中，有幾個人能不失去理智？又有幾個人能活著回來呢？</p>
         </div>
     </div>
-	
+    
     <div class="background hidden" id="characters-content">
         <img src="https://i.imgur.com/7fnJ2oF.png" alt="Image">
         <div class="text-content">
-            <p>角色列表</p>
+            <h2>角色列表</h2>
+            <div class="carousel">
+                <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/Q09mzBu.png" alt="Image">
+                        <h3>幻影家富（幻影 家富（げんえい やとみ），原型：LCKmye）</h3>
+                        <p>19歲（初登場），172cm，主人公之一。性格比較衝動，看起來時常情緒激動，內心中的想法非常混沌，但是意外的在做事方面能夠有條有理的完成工作。</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/XMJcnRt.png" alt="Image">
+                        <h3>四葉澄花（四葉 澄花（よつば すみか），原型：yAsm1nz）</h3>
+                        <p>18歲（初登場），140cm。幼時生了場大病，差點喪命，痊癒後，就會時不時見到關於未來異象的夢境。擅長自學，並且好奇心極強，喜歡採取自然的方式行事，常常太過注重邏輯和推理，進而偏離內心真正的方向。</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/uL6pNYW.png" alt="Image">
+                        <h3>赤塚蓮（赤塚 蓮（あかつか れん），原型：Flameyan）</h3>
+                        <p>18歲（初登場），169cm。個性頑固，平常沒有在鍛鍊力氣卻異於常人，常被開玩笑說已經超越人類了，或是說已經超越了。赤塚家大火的倖存者，全家老少所有直系的親戚都死於那場大火，附近鄰居都在謠傳這是被神明詛咒的結果。</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/JuSDeDi.png" alt="Image">
+                        <h3>卡西亞／冰室安（卡西亞（カシーイーヤ）／氷室 安（ひむろ あん）），原型：KaSeeia）</h3>
+                        <p>28歲（初登場），182cm。宅帝國中最年長的人，喜歡聊天、發出怪聲、講低級笑話，是邀請其他成員到東京遊玩的人。在緊急時刻時會採用相當激進的手段解決問題，事非常極端的一個人，雖然看過很多血腥，危急場面，但是卻會靈體等迷信生物而感到畏懼。自小即為孤兒，經人口轉賣商被賣到了西里西亞聯邦境內，後被一名信奉東正教支系的尤里西斯神父領養，因此，在青年時期，它便接觸了許多與黑魔法、獻祭、狂熱信仰、召喚儀式有關的知識。 在卡西亞16歲時，一群黑幫幫眾圍住了這在荒郊野外的教堂，卡西亞盯著外面，看見有個穿著西裝、抽著雪茄的男人緩緩走了進來，他說自己是來找尤里西斯神父的，這時，尤里西斯神父從自己的房間出來了，並邀請他到地下室好好談談，說結果包他滿意。 一小時……兩小時……隨著時間流逝，天黑了，那兩人從地下室愉悅的出來了，似乎達成了甚麼交易般，在黑幫要離開前───他們一把把卡西亞抓上了車，卡西亞完全不知道該怎麼逃離，便向神父大聲哭喊、求救，但，尤里西斯神父什麼也沒做，只是頭也不回的進了自己的房間。 在那之後，卡西亞每天面對到的是各種折磨，還有血祭祀、古神、黑魔法等知識、大量的古武術及體能訓練，這樣的高壓生活著實令他感到窒息，他想發瘋，但沒辦法，因為他知道：自己發瘋的那一刻代表著自己人生的終結。 往後幾年，卡西亞都過著日復一日的生活，每天學習相同的知識，被試圖以第三文明的力量強化這個無惡不作的組織──斯拉夫東正兄弟會，據組織高層所說，他們希望能藉由卡西亞，這一名從幼時就受過相關教育，且沒有正常家庭、身分的人來學習這些秘術，藉此掌握西里西亞聯邦，知道甚至是整個世界的主導權。 但那些高層想的太美了，在某天早晨，卡西亞了解到一件事，他早已成長茁壯了，甚至是整個組織中最有價值的人，他不該被這個幫派奴役、拘束住才對，而要起身反抗，於是他便拿起了槍，將營地中的人一一殺害，並駕車逃往了另一個國家。</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/eRkDGjQ.png" alt="Image">
+                        <h3>星嵐彩云 （星嵐 彩云（ぼしらし あやも），原型：LanYun）石川由依</h3>
+                        <p>18歲（初登場），150cm。喜歡嘗試新的事物，也喜歡去交朋友，活潑、保守的外表下卻潛藏著賭徒的基因。</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/CwbRnKt.png" alt="Image">
+                        <h3>木野雛（木野 ひよこ（おのざと ひよこ），原型：LanyeGG）</h3>
+                        <p>18歲（初登場），155cm。因為跟星嵐彩云同一個初中時就認識，所以關係很要好，因為開朗和樂觀的性格，所以很受周遭的人愛戴；有時又會講出不經過大腦的幹話，無時無刻的笑顏對人，實際個性可能不會跟表現出來的相同。</p>
+                    </div>
+                </div>
+                <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
         </div>
     </div>
 
     <script>
+        let currentIndex = 0;
+
         function showPage(pageId) {
             var pages = document.querySelectorAll('.background');
             pages.forEach(function(page) {
@@ -154,6 +252,14 @@
                     page.classList.add('hidden');
                 }
             });
+        }
+
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-item');
+            const totalSlides = slides.length;
+            currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
         }
     </script>
 </body>
