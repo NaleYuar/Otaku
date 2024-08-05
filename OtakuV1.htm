@@ -62,6 +62,15 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
         }
+		
+		 .text-content2 {
+            max-width: 50%;
+            margin: 20px auto 0 auto;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
 
         h2 {
             font-family: 'Georgia', serif;
@@ -185,6 +194,36 @@
 			height: auto;
 			margin: 80px auto; /* 增加間距 */
 		}
+		
+		.credits {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.credit {
+			border-bottom: 1px solid #444;
+			padding-bottom: 10px;
+		}
+
+		.credit h3 {
+			font-family: 'Georgia', serif; /* 或者你選擇的任何其他字體 */
+			font-size: 22px; /* 調整字體大小 */
+			font-weight: bold; /* 設置字體粗體 */
+			color: #ffcc00; /* 使用顯眼的顏色 */
+			margin: 0;
+			text-transform: uppercase; /* 大寫字母 */
+			letter-spacing: 1px; /* 增加字母間距 */
+			background: linear-gradient(135deg, #ffcc00, #ff9900); /* 背景漸變色 */
+			-webkit-background-clip: text; /* 只對文字顯示背景 */
+			color: transparent; /* 文字顏色設為透明，以顯示背景顏色 */
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字陰影 */
+		}
+
+		.credit p {
+			font-size: 18px;
+			margin: 5px 0;
+		}
     </style>
 </head>
 <body>
@@ -192,6 +231,8 @@
         <a href="#" class="home" onclick="showPage('main-content')">御宅的噩夢</a>
         <a href="#" class="home2" onclick="showPage('intro-content')">故事簡介</a>
         <a href="#" class="home2" onclick="showPage('characters-content')">角色介紹</a>
+		<a href="#" class="home2" onclick="showPage('game-content')">遊戲內容</a>
+		<a href="#" class="home2" onclick="showPage('development-content')">開發團隊</a>
     </nav>
 
     <div class="background" id="main-content">
@@ -211,9 +252,103 @@
 			<img src="https://i.imgur.com/HEgRnE7.png" alt="Image" class="spaced-image">
 			<img src="https://i.imgur.com/TfFEV9V.png" alt="Image" class="spaced-image">
 			<img src="https://i.imgur.com/Kct4NOc.png" alt="Image" class="spaced-image">
-			<img src="https://i.imgur.com/ICB8Sqc.png" alt="Image" class="spaced-image">
+			<img src="https://i.imgur.com/YU2GpM3.png" alt="Image" class="spaced-image">
 		</div>
     </div>
+	
+	<div class="background hidden" id="game-content">
+
+</div>
+
+	
+	<div class="background hidden" id="development-content">
+    <div class="text-content2">
+        <h2>開發團隊</h2>
+        <div class="credits">
+            <div class="credit">
+                <h3>企劃：</h3>
+                <p>KaSeeia</p>
+            </div>
+            <div class="credit">
+                <h3>原畫：</h3>
+                <p>yAsm1nz</p>
+            </div>
+            <div class="credit">
+                <h3>人物設計協助：</h3>
+                <p>Flameyan、IcedTea、NaleYuar、Xannis、LanYun、LanyeeGG、Lag、Luifer</p>
+            </div>
+            <div class="credit">
+                <h3>劇本：</h3>
+                <p>yAsm1nz</p>
+            </div>
+            <div class="credit">
+                <h3>劇本協力：</h3>
+                <p>IcedTea、NaleYuar、KaSeeia</p>
+            </div>
+            <div class="credit">
+                <h3>CG：</h3>
+                <p>yAsm1nz</p>
+            </div>
+            <div class="credit">
+                <h3>背景CG：</h3>
+                <p>yAsm1nz</p>
+            </div>
+            <div class="credit">
+                <h3>背景CG設計：</h3>
+                <p>yAsm1nz</p>
+            </div>
+            <div class="credit">
+                <h3>標題介面Logo：</h3>
+                <p>yAsm1nz</p>
+            </div>
+            <div class="credit">
+                <h3>UI介面設計：</h3>
+                <p>NaleYuar</p>
+            </div>
+            <div class="credit">
+                <h3>小道具設計：</h3>
+                <p></p>
+            </div>
+            <div class="credit">
+                <h3>程式：</h3>
+                <p></p>
+            </div>
+            <div class="credit">
+                <h3>OP影像：</h3>
+                <p></p>
+            </div>
+            <div class="credit">
+                <h3>ED影像：</h3>
+                <p></p>
+            </div>
+            <div class="credit">
+                <h3>背景上色：</h3>
+                <p>yAsm1nz</p>
+            </div>
+            <div class="credit">
+                <h3>BGM製作：</h3>
+                <p></p>
+            </div>
+            <div class="credit">
+                <h3>Debug：</h3>
+                <p></p>
+            </div>
+            <div class="credit">
+                <h3>廣報：</h3>
+                <p></p>
+            </div>
+            <div class="credit">
+                <h3>網頁設計：</h3>
+                <p>NaleYuar</p>
+            </div>
+            <div class="credit">
+                <h3>特別感謝：</h3>
+                <p>Shako、OtakuEmpire</p>
+            </div>
+        </div>
+    </div>
+</div>
+
     
     <div class="background hidden" id="characters-content">
         <img src="https://i.imgur.com/7fnJ2oF.png" alt="Image">
