@@ -87,39 +87,102 @@
         }
 
         /* 媒體查詢，適應不同螢幕尺寸 */
-        @media (min-width: 768px) {
-            .navbar {
-                flex-direction: row;
-            }
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+    }
 
-            .navbar a {
-                margin: 0 15px;
-                font-size: 22px;
-            }
+    .navbar a {
+        margin: 0 15px;
+        font-size: 22px;
+    }
 
-            .navbar .home {
-                font-size: 28px;
-            }
+    .navbar .home {
+        font-size: 28px;
+    }
 
-            .background {
-                padding: 50px;
-                margin-top: 20px;
-            }
+    .background {
+        padding: 50px;
+        margin-top: 20px;
+    }
 
-            .text-content {
-                max-width: 1000px;
-                margin: 20px auto 0 auto;
-                padding: 20px;
-            }
+    .text-content {
+        max-width: 1000px;
+        margin: 20px auto 0 auto;
+        padding: 20px;
+    }
 
-            h2 {
-                font-size: 32px;
-            }
+    h2 {
+        font-size: 32px;
+    }
 
-            p {
-                font-size: 24px;
-            }
-        }
+    p {
+        font-size: 24px;
+    }
+}
+
+/* 手機視圖，螢幕小於 768px */
+@media (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center; /* 居中對齊 */
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .navbar .home {
+        font-size: 22px;
+    }
+
+    .background {
+        padding: 20px;
+        margin-top: 70px; /* 確保內容不被導航欄遮擋 */
+    }
+
+    .text-content,
+    .text-content2 {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .image-container {
+        flex-direction: column; /* 垂直排列圖片 */
+        align-items: center;
+    }
+
+    .image-container img {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px; /* 增加圖片間距 */
+    }
+
+    .carousel-inner {
+        flex-direction: column; /* 垂直排列滑塊 */
+    }
+
+    .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .carousel-control {
+        width: 40px;
+        height: 40px;
+        font-size: 28px;
+    }
+}
 
         .carousel {
             position: relative;
@@ -234,14 +297,17 @@
 		/* 為 '僕從種族' 和 '半生物' 設置顏色 */
 		#game-content h3 {
 			color: #4a90e2; /* 例如藍色 */
+			font-size: 24px;
 		}
 
 		#game-content h4 {
 			color: #7f8c8d; /* 例如灰藍色 */
+			font-size: 18px;
 		}
 
 		#game-content h5 {
 			color: #7f8c8d; /* 例如灰藍色 */
+			font-size: 16px;
 		}
 
 		/* 為 '寄生體／感染者', '甦醒者', 和 '初芽' 設置顏色 */
@@ -278,6 +344,7 @@
 			<img src="https://i.imgur.com/TfFEV9V.png" alt="Image" class="spaced-image">
 			<img src="https://i.imgur.com/Kct4NOc.png" alt="Image" class="spaced-image">
 			<img src="https://i.imgur.com/YU2GpM3.png" alt="Image" class="spaced-image">
+			
 		</div>
     </div>
 	
@@ -310,7 +377,7 @@
 	
 	<div class="background hidden" id="development-content">
     <div class="text-content2">
-        <h2>開發團隊</h2>
+        <h2>御宅惡夢製作委員會</h2>
         <div class="credits">
             <div class="credit">
                 <h3>企劃：</h3>
