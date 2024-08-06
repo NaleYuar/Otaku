@@ -87,95 +87,45 @@
         }
 
         /* 媒體查詢，適應不同螢幕尺寸 */
-@media (min-width: 768px) {
-    .navbar {
-        flex-direction: row;
-    }
+        @media (min-width: 768px) {
+            .navbar {
+                flex-direction: row;
+            }
 
-    .navbar a {
-        margin: 0 15px;
-        font-size: 22px;
-    }
+            .navbar a {
+                margin: 0 15px;
+                font-size: 22px;
+            }
 
-    .navbar .home {
-        font-size: 28px;
-    }
+            .navbar .home {
+                font-size: 28px;
+            }
 
-    .background {
-        padding: 50px;
-        margin-top: 20px;
-    }
+            .background {
+                padding: 50px;
+                margin-top: 20px;
+            }
 
-    .text-content {
-        max-width: 1000px;
-        margin: 20px auto 0 auto;
-        padding: 20px;
-    }
+            .text-content {
+                max-width: 1000px;
+                margin: 20px auto 0 auto;
+                padding: 20px;
+            }
+			
+			 .text-content2 {
+                max-width: 50%;
+				margin: 20px auto 0 auto;
+				padding: 15px;
+            }
 
-    h2 {
-        font-size: 32px;
-    }
+            h2 {
+                font-size: 32px;
+            }
 
-    p {
-        font-size: 24px;
-    }
-}
-
-/* 手機視圖，螢幕小於 768px */
-@media (max-width: 767px) {
-    .carousel {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .carousel-inner {
-        display: flex;
-        flex-direction: row; /* 水平排列滑塊 */
-        transition: transform 0.5s ease;
-    }
-
-    .carousel-item {
-        min-width: 100%; /* 確保每個滑塊佔據 100% 寬度 */
-        box-sizing: border-box;
-    }
-
-    .carousel-item img {
-        width: 100%; /* 確保圖片不超過容器寬度 */
-        height: auto; /* 自動調整高度 */
-    }
-
-    .carousel-control {
-        position: absolute;
-        top: 50%;
-        width: 40px;
-        height: 40px;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        font-size: 24px;
-        text-align: center;
-        line-height: 40px;
-        z-index: 10;
-    }
-
-    .carousel-control.prev {
-        left: 10px;
-        transform: translateY(-50%);
-    }
-
-    .carousel-control.next {
-        right: 10px;
-        transform: translateY(-50%);
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, 0.9); /* 增強控制按鈕的可見性 */
-    }
-}
-
-
+            p {
+                font-size: 24px;
+            }
+        }
 
         .carousel {
             position: relative;
@@ -526,38 +476,6 @@
             const offset = -currentIndex * 100;
             document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
         }
-		
-		// 增強觸控滑動支持
-function moveSlide(direction) {
-    const slides = document.querySelectorAll('.carousel-item');
-    const totalSlides = slides.length;
-    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
-    const offset = -currentIndex * 100;
-    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
-}
-
-// 支持手指滑動
-let touchStartX = 0;
-let touchEndX = 0;
-
-document.querySelector('.carousel-inner').addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-});
-
-document.querySelector('.carousel-inner').addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-});
-
-function handleSwipe() {
-    if (touchEndX < touchStartX) {
-        moveSlide(1); // 向左滑動
-    }
-    if (touchEndX > touchStartX) {
-        moveSlide(-1); // 向右滑動
-    }
-}
-
     </script>
 </body>
 </html>
